@@ -22,7 +22,7 @@
     </header>
     <main>
         <div class="formu">
-            <form action="mailto:manuelbonotorres@gmail.com" method="POST" enctype="text/plain">
+            <form action="mailto:manuelbonotorres@gmail.com" method="POST" enctype="text/plain" name="formulario"  onsubmit="return validar_nombre()">
                 <fieldset>
                     <legend>Datos Básica</legend>
                     <label>Nombre: <input type="text" name="nombre" size="30"></label>
@@ -63,7 +63,7 @@
                     </p>
                     <p>
                         Valora mi página
-                        <label class="comida">1</label>
+                        <label class="comida"><br>1</label>
                         <input type="radio" name="p3" class="hp"><br>
                         <label class="comida">2</label>
                         <input type="radio" name="p3" class="hp"><br>
@@ -75,8 +75,8 @@
                     <button type="submit" value="Enviar">enviar</button>
                     <button type="reset" value="Borrar">Borrar</button>
                 </fieldset>
-        </form>
-    </div>
+            </form>
+        </div>
     </main>
     <footer>
         <figure>
