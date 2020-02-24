@@ -9,11 +9,25 @@ function validar_nombre() {
     }
 }
 
-function validar_pass() {
-    if ((document.getElementById("Contraseña").value.length < 4) ||
-    (document.getElementById("Contraseña").value.length) > 20 ) {
-        alert("la clave tiene que tener entre 4 y 20 caracteres")
+function mayusculas() {
+    var nombre = document.getElementById("Apodo");
+    nombre.value = nombre.value.toUpperCase();
+}
+
+function minusculas() {
+    var nombre = document.getElementById("otro");
+    nombre.value = nombre.value.toLowerCase();
+}
+
+function numerico() {
+    var telefono = document.getElementById("tel").value;
+    if (isNaN(telefono)) {  
+        alert("Error: solo se admiten numeros");
+        return false;
     }
-    else
-        alert("Todo es correcto")
-};
+}
+
+function change_color() {
+    document.getElementById("opiniones").style.color = "green";
+}
+
