@@ -9,15 +9,13 @@ function validar_nombre() {
     }
 }
 
-function mayusculas() {
-    var nombre = document.getElementById("Apodo");
-    nombre.value = nombre.value.toUpperCase();
-}
-
-function minusculas() {
-    var nombre = document.getElementById("otro");
-    nombre.value = nombre.value.toLowerCase();
-}
+function validar_select() {
+    indice = document.getElementById("opciones").value;
+    if (indice == null || indice == 0) {
+        alert("Escriba algo al menos");
+        return false;
+    };
+};
 
 function numerico() {
     var telefono = document.getElementById("tel").value;
@@ -27,7 +25,11 @@ function numerico() {
     }
 }
 
-function change_color() {
-    document.getElementById("opiniones").style.color = "green";
+function vacio(control) {
+    control.value == "";
+}
+function verificar(control) {
+    if (control.value == "")
+        alert("debe ingresar datos");
 }
 

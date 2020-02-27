@@ -22,21 +22,21 @@
     </header>
     <main>
         <div class="formu">
-            <form action="mailto:manuelbonotorres@gmail.com" method="POST" enctype="text/plain" name="formulario" onclick="change_color()" onchange="numerico()" onchange="minusculas()" onchange="mayusculas()" onsubmit="return validar_nombre()">
+            <form action="mailto:manuelbonotorres@gmail.com" method="POST" enctype="text/plain" name="formulario" onsubmit="return validar_nombre()">
                 <fieldset>
                     <legend>Datos Básica</legend>
                     <label>Nombre: <input type="text" name="nombre" size="30"></label>
-                    <label>Apellidos: <input type="text" name="Apellidos" size="30"></label><br>
+                    <label>Apellidos: <input type="text" name="Apellidos" size="30" onfocus="vacio(this)" onblur="verificar(this)"></label><br>
                     Opiniones<br><textarea name="opiniones" id="opiniones" rows="8" cols="50">.....</textarea><br />
                     Foto de perfil<br> <input type="file" name="adjunto" id="adjunto" accept=".doc, .git" /><br>
-                    Nombre en la página<br> <input type="text" name="Apodo" id="Apodo" size="10" autocomplete="nickname" ><br>
-                    Contraseña: <input type="password" name="pass" id = "Contrasena" minlength="6" maxlength="18"  ><br><br>
-                    Introduce tu edad: <input type="number" name="Edad" step="1" required placeholder="18"
+                    Nombre en la página<br> <input type="text" name="Apodo" id="Apodo" size="10" autocomplete="nickname"  ><br>
+                    Contraseña: <input type="password" name="pass" id = "contrasena" minlength="6" maxlength="18" onfocus="vacio(this)" onblur="verificar(this)"  ><br><br>
+                    Introduce tu edad: <input type="number" name="Edad" step="1" 
                         min="18"><br><br>
-                    Número de teléfono: <input type="text" name="Telefono" id="tel" value="+34"><br><br>
+                    Número de teléfono: <input type="text" name="Telefono" id="tel" value="+34" onchange="numerico()" ><br><br>
                     Introduce tu correo electronico: <input type="email" name="Correo" size="20" autocomplete="email"
-                        required placeholder="@gmail.com, @outlook.es"><br><br>
-                    Introduce tu fecha de nacimiento: <input type="date" name="Fecha" required><br><br>
+                        ><br><br>
+                    Introduce tu fecha de nacimiento: <input type="date" name="Fecha" ><br><br>
                 </fieldset>
                 <fieldset>
                     <legend>Tipo de comida favorita </legend>
@@ -48,7 +48,7 @@
                         <label class="comida">Asiática</label>
                         <input type="radio" name="p1" class="h"><br>
                         <label class="comida">Otra</label>
-                        <input type="text" name="p1" id="otro" class="h"> <br>
+                        <input type="text" name="p1" id="opciones" class="h" onblur="validar_select()" > <br>
                     </p>
                     <p>
                         Chef español favorito:
