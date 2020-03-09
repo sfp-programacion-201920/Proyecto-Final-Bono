@@ -30,13 +30,13 @@
                     Opiniones<br><textarea name="opiniones" id="opiniones" rows="8" cols="50">.....</textarea><br />
                     Foto de perfil<br> <input type="file" name="adjunto" id="adjunto" accept=".doc, .git" /><br>
                     Nombre en la página<br> <input type="text" name="Apodo" id="Apodo" size="10" autocomplete="nickname"  ><br>
-                    Contraseña: <input type="password" name="pass" id = "contrasena" minlength="6" maxlength="18"   ><br><br>
+                    Contraseña: <input type="password" name="contrasena" id = "contrasena"  onblur="validar_contrasena()"  ><br><br>
                     Introduce tu edad: <input type="number" name="Edad" id="edad" step="1" 
                         min="18"><br><br>
                     Número de teléfono: <input type="text" name="Telefono" id="tel" value="+34" onchange="numerico()" ><br><br>
-                    Introduce tu correo electronico: <input type="email" name="Correo" size="20" autocomplete="email"
+                    Introduce tu correo electronico: <input type="email" name="email" onblur="validar_email()" size="20" id="email" autocomplete="email"
                         ><br><br>
-                    Introduce tu fecha de nacimiento: <input type="date" name="Fecha" ><br><br>
+                    Introduce tu fecha de nacimiento: <input type="date" name="Fecha" id="fecha" ><br><br>
                 </fieldset>
                 <fieldset>
                     <legend>Tipo de comida favorita </legend>

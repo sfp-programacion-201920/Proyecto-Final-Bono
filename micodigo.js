@@ -30,14 +30,35 @@ function validar_nombre() {
         alert("Ingrese la edad");
         return false;
     };
+    var nombre = document.forms["formulario"]["tel"].value;
+    if (nombre == null || nombre == 0) {
+        alert("Ingrese el telefono");
+        return false;
+    };
+    var nombre = document.forms["formulario"]["email"].value;
+    if (nombre == null || nombre == 0) {
+        alert("Ingrese la email");
+        return false;
+    };
+    var nombre = document.forms["formulario"]["fecha"].value;
+    if (nombre == null || nombre == 0) {
+        alert("Ingrese la fecha de nacimiento");
+        return false;
+    };
+    var nombre = document.forms["formulario"]["edad"].value;
+    if (nombre == null || nombre == 0) {
+        alert("Ingrese la edad");
+        return false;
+    };
 };  
 
-
-
-
-
-
-  
+function validar_contrasena() {
+    var contraseña = document.forms["formulario"]["contrasena"].value;
+    if (contraseña == 0) {
+        alert("La contaseña no estar vacia");
+        return false;
+    }
+}
 function validar_select() {
     indice = document.getElementById("opciones").value;
     if (indice == null || indice == 0) {
@@ -53,6 +74,13 @@ function numerico() {
         return false;
     }
 }
+function validar_email() {
+    var valor = document.forms["formulario"]["email"].value;
+    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(valor))) {
+        alert("El email solo admite caracteres correspondidos")
+        return false;
+    }
+};
 
 
 
